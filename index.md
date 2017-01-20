@@ -1,11 +1,18 @@
+
 ## Kaggle Titanic Competition
 
-##### Import the Pandas library.
+##### Import NumPy and Pandas.
 
 
 ```python
 import numpy as np
 import pandas as pd
+```
+
+
+```python
+import warnings
+warnings.filterwarnings('ignore')
 ```
 
 ##### Load the train and test datasets to create two DataFrames.
@@ -280,18 +287,6 @@ train['Child'][train['Age'] < 18] = 1
 train['Child'][train['Age'] >= 18] = 0
 ```
 
-    /Users/pedroterrondastis/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:1: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      if __name__ == '__main__':
-    /Users/pedroterrondastis/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:2: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      from ipykernel import kernelapp as app
-
-
 Print normalized Survival Rates for passengers under 18.
 
 
@@ -340,13 +335,6 @@ Set Survived to 1 if Sex equals "female" and print the 'Survived' column from 't
 ```python
 test_one['Survived'][test_one['Sex'] == 'female'] = 1
 ```
-
-    /Users/pedroterrondastis/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:1: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      if __name__ == '__main__':
-
 
 
 ```python
@@ -417,7 +405,3 @@ print(test_one['Survived'])
     Name: Survived, dtype: int64
 
 
-
-```python
-
-```
